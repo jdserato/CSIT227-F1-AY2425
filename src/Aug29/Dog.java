@@ -2,21 +2,16 @@ package Aug29;
 
 import Aug22.Person;
 
-public class Dog extends Animal {
+public class Dog extends Mammal {
     Person owner;
 
-    public Dog(String name) {
-        super(name);
+    public Dog(String name, int age) {
+        super(name, age);
     }
 
-    @Override
-    public String toString() {
-        return name;
-    }
 
     @Override
     public void talk() {
-        super.talk();
         System.out.println("aw aw");
     }
 }

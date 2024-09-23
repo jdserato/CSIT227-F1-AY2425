@@ -1,8 +1,10 @@
 package Aug22;
 
+import Aug29.Pest;
+
 import java.util.Date;
 
-public class Person {
+public class Person implements Pest {
     final static String SPECIES = "Homo Sapiens";
     static int number_of_persons = 0;
     private String name, occupation, relationship_status;
@@ -63,6 +65,11 @@ public class Person {
     // METHOD OVERLOADING
     void walk(float distance) {
 
+    }
+
+    @Override
+    public void transmitVirus() {
+        System.out.println("climate change++");
     }
 }
 
