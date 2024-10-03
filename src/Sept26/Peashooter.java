@@ -5,10 +5,10 @@ public class Peashooter extends Plant{
     RangeType range = RangeType.LONG_RANGE;
 
     public Peashooter() {
-        super(100, DEFAULT_HP);
+        super(100, DEFAULT_HP, 2);
     }
 
     int shoot() {
-        return 1;
+        return 2;
     }
 }

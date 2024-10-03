@@ -40,7 +40,7 @@ public class Zombie {
 
     @Override
     public String toString() {
-        return getClass().toString().substring(getClass().toString().indexOf(".")+1) + " (hp: " + hp + (s != null ? "+ " + s.getHp() :"")+") -> location: " + location.col + ", " + location.row;
+        return getClass().toString().substring(getClass().toString().indexOf(".")+1) + " (hp: " + hp + (s != null ? "+ " + s.getHp() :"")+") -> loc: " + location;
     }
 
     public boolean reachesHouse() {

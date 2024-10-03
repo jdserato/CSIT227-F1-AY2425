@@ -1,10 +1,10 @@
 package Sept26;
 
-public class SunShroom extends Mushroom{
+public class SunShroom extends Mushroom implements SunProducer{
     Size size;
 
     public SunShroom() {
-        super(25, DEFAULT_HP);
+        super(25, DEFAULT_HP, 3);
         size = Size.SMALL;
     }
 
@@ -12,7 +12,7 @@ public class SunShroom extends Mushroom{
         size = Size.BIG;
     }
 
-    int generate_sun() {
+    public int generate_sun() {
         if (size == Size.SMALL) {
             return 15;
         }

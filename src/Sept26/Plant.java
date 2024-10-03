@@ -4,27 +4,19 @@ public abstract class Plant {
     public static final int DEFAULT_HP = 10;
     Coord location;
     int sun_cost;
-    boolean is_asleep;
     private int hp;
     boolean is_aquatic;
+    int cooldown;
 
-    public Plant(int sun_cost, int hp) {
+    public Plant(int sun_cost, int hp, int cooldown) {
         this.sun_cost = sun_cost;
-        this.hp = hp;
-        is_asleep = false;
-        is_aquatic = false;
-    }
-
-    public Plant(int sun_cost, boolean is_asleep, int hp) {
-        this.sun_cost = sun_cost;
-        this.is_asleep = is_asleep;
+        this.cooldown = cooldown;
         this.hp = hp;
         is_aquatic = false;
     }
 
-    public Plant(int sun_cost, boolean is_asleep, int hp, boolean is_aquatic) {
+    public Plant(int sun_cost, int hp, boolean is_aquatic) {
         this.sun_cost = sun_cost;
-        this.is_asleep = is_asleep;
         this.hp = hp;
         this.is_aquatic = is_aquatic;
     }
@@ -51,5 +43,5 @@ public abstract class Plant {
 
     @Override
     public String toString() {
-        return getClass().toString().substring(getClass().toString().indexOf(".")+1) + " (hp: " + hp + ") -> location: " + location.col + ", " + location.row;}
+        return getClass().toString().substring(getClass().toString().indexOf(".")+1) + " (hp: " + hp + ") -> loc: " + location;}
 }

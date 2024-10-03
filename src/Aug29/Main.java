@@ -20,17 +20,18 @@ public class Main {
         for (int i : numbers) {
             System.out.print(i + " ");
         }
+        Animal vince = new Cat("Jay", 7);
         List<Animal> animals = new ArrayList<>();
         System.out.println();
         animals.add(new Person("Vince", 18));
         animals.add(new Dog("Browny", 5));
-        animals.add(new Cat("Mingkay", 9));
-        animals.add(new Cockroach("Joey", "", 100));
-        animals.add(new Whale("Moby", 2000));
+        animals.add(new Cat("Mingkay", 18));
+        animals.add(new Cockroach("Joey", "", 7));
+        animals.add(new Whale("Vince", 4));
         animals.add(new Platypus("Perry", 10));
-        animals.add(new Fish("Nemo", 1));
-        animals.add(new Bird("Phoenix", 20));
-        animals.add(new Penguin("Happy", 15));
+        animals.add(new Fish("Vince", 1));
+        animals.add(new Bird("Phoenix", 18));
+        animals.add(new Penguin("Happy", 18));
         Collections.sort(animals);
         for (Animal a : animals) {
             System.out.print(a.toString() + ": ");
@@ -39,6 +40,18 @@ public class Main {
         animals.sort(new AnimalAgeComparator());
         for (Animal a : animals) {
             System.out.println(a);
+        }
+        System.out.println("SORT BY VINCE, 7");
+        animals.sort(new AnimalWithAgeComparator(vince));
+        for (Animal a : animals) {
+            System.out.println(a);
+        }
+        System.out.println("ONLY PRINT VINCEs");
+        Animal second = new Person("Vince", 18);
+        for (Animal a : animals) {
+            if (a.equals(18)) {
+                System.out.println(a);
+            }
         }
     }
 }
