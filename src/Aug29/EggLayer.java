@@ -5,4 +5,5 @@ public interface EggLayer {
         return "hard";
     }
     int layEggs();
+//    void breathe();
 }

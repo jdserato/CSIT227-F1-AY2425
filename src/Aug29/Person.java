@@ -14,4 +14,8 @@ public class Person extends Mammal implements Swimmer{
         System.out.println(name + " swims using hands");
     }
 
+    @Override
+    public void breastfeed() {
+        super.breastfeed();
+    }
 }

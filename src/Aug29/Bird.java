@@ -1,6 +1,6 @@
 package Aug29;
 
-public class Bird extends Animal implements EggLayer{
+public class Bird extends Animal implements EggLayer, Breather{
     public Bird(String name, int age) {
         super(name, age);
     }
@@ -13,6 +13,11 @@ public class Bird extends Animal implements EggLayer{
     @Override
     public int layEggs() {
         return 4;
+    }
+
+    @Override
+    public void breathe() {
+
     }
 
 }

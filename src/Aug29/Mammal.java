@@ -5,7 +5,7 @@ public abstract class Mammal extends Animal{
         super(name,age);
     }
 
-    void breastfeed() {
+    protected void breastfeed() {
         System.out.println(name + " provides milk");
     }
 }

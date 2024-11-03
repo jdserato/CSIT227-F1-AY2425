@@ -4,7 +4,7 @@ import Aug29.Pest;
 
 import java.util.Date;
 
-public class Person implements Pest {
+public class Person {
     final static String SPECIES = "Homo Sapiens";
     static int number_of_persons = 0;
     private String name, occupation, relationship_status;
@@ -67,7 +67,7 @@ public class Person implements Pest {
 
     }
 
-    @Override
+//    @Override
     public void transmitVirus() {
         System.out.println("climate change++");
     }
